@@ -12,7 +12,7 @@ class EzLocationMapper implements Mapper
         return new TreeItem(
             array(
                 "id" => $element->id,
-                "parentId" => $element->parentId,
+                "parentId" => $element->parentLocationId,
                 "inner" => $element
             )
         );
