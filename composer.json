@@ -1,0 +1,26 @@
+{
+  "name": "libpoint/menu-structure-builder",
+  "description": "Builds menu structure from flat array objects",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Mario Ivancic"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "LibPoint\\TreeStructure\\": "lib"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "LibPoint\\Example\\TreeStructure\\": "example"
+    }
+  },
+  "require": {
+  },
+  "require-dev": {
+    "symfony/var-dumper": "~4.0"
+  }
+}
