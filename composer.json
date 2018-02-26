@@ -1,8 +1,8 @@
 {
-  "name": "libpoint/menu-structure-builder",
+  "name": "libpoint/tree-structure-builder",
   "description": "Builds menu structure from flat array objects",
   "minimum-stability": "stable",
-  "license": "proprietary",
+  "license": "GPL-2.0-only",
   "authors": [
     {
       "name": "Mario Ivancic"
@@ -19,6 +19,7 @@
     }
   },
   "require": {
+    "php": "~5.6|7.0"
   },
   "require-dev": {
     "symfony/var-dumper": "~4.0"
