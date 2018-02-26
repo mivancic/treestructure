@@ -24,7 +24,7 @@ class ArrayBuilder extends AbstractBuilder implements BuilderInterface
                 /** @var TreeItem $parent */
                 $parent = $this->findParent($this->treeItems,function($litem) use ($treeItem){
 
-                    return $litem->inner->id === $treeItem->inner->parentId;
+                    return $treeItem->parentId == $litem->id;
                 });
 
                 if ($parent){
