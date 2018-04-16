@@ -18,23 +18,23 @@ class ArrayBuilder extends AbstractBuilder implements BuilderInterface
 
     public function build()
     {
-        return reset(
-            array_filter($this->treeItems,function($treeItem) {
+        $treeItems = array_filter($this->treeItems,function($treeItem) {
 
-                /** @var TreeItem $parent */
-                $parent = $this->findParent($this->treeItems,function($litem) use ($treeItem){
+            /** @var TreeItem $parent */
+            $parent = $this->findParent($this->treeItems,function($litem) use ($treeItem){
 
-                    return $treeItem->parentId == $litem->id;
-                });
+                return $treeItem->parentId == $litem->id;
+            });
 
-                if ($parent){
-                    $parent->addChild($treeItem);
-                    return false;
-                }
+            if ($parent){
+                $parent->addChild($treeItem);
+                return false;
+            }
 
-                return $treeItem;
+            return $treeItem;
 
-            })
-        );
+        });
+
+        return reset($treeItems);
     }
 }
